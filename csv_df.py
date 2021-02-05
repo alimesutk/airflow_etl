@@ -30,7 +30,7 @@ class CrudeSuicideRates(Base):
     __tablename__ = 'crude_suicide_rates'
     __table_args__ = {'schema': 'public'}
 
-    # SQLALchemy ORM yapısı içinde PK tanımlı bir kolon olmadan çalışma bu nedenle uniqe olması için uuid tanımlandı.
+    # SQLALchemy ORM yapısı içinde PK tanımlı bir kolon olmadan çalışmaz bu nedenle unique olması için uuid tanımlandı.
     id = Column('id', Integer, primary_key=True, autoincrement=True)
     location = Column('location', String(100), nullable=False, quote=False)
     period = Column('period', Integer, nullable=False)
