@@ -21,7 +21,7 @@ engine = create_engine('postgresql://admin:secret@localhost:54332/postgres', )
 Base = declarative_base()
 Session = sessionmaker(bind=engine)
 session = Session()
-#tablo yada kolon isimlendirmesinde tırnak işareti eklememeis için aşağıdaki 2 satır çalıştıtırılır.
+# tablo yada kolon isimlendirmesinde tırnak işareti eklememesi için aşağıdaki 2 satır çalıştırılır.
 engine.dialect.identifier_preparer.initial_quote = ''
 engine.dialect.identifier_preparer.final_quote = ''
 
